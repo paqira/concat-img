@@ -55,9 +55,16 @@ def main(shape: tuple[int, int], out: PathLike, file: Sequence[PathLike]):
     OUT_NAME is a resulting image file name.
     FILE is source images.
 
-    Examples:
+    concat-img 2 3 result.jpg src.0.jpg src.1.jpg src.2.jpg src.3.jpg src.4.jpg src.5.jpg
 
-    $ concat-img 2 3 result.jpg src.0.jpg src.1.jpg src.2.jpg src.3.jpg src.4.jpg src.5.jpg
+    results an image that aligns the input files as below:
+
+    \b
+    +---+---+---+
+    | 0 | 1 | 2 |
+    +---+---+---+
+    | 3 | 4 | 5 |
+    +---+---+---+
     """
     # print help if no file given
     if not file:
